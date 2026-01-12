@@ -13,10 +13,9 @@ public class StatsService {
 
     public long averagesAmount(long[] sales) {
 
-        long sumSales = 0;
+        long sumSales = sumarySales(sales);
         long averageAmount = 0;
         for (int i = 0; i < sales.length; i++) {
-            sumSales = sumSales + sales[i];
             averageAmount = sumSales / 12;
         }
         return averageAmount;
@@ -48,12 +47,8 @@ public class StatsService {
 
     public int minimumAverageSales(long[] sales) {
         int minAverageSales = 0;
-        long sumSales = 0;
+        long sumSales = sumarySales(sales);
 
-        for (int i = 0; i < sales.length; i++) {
-
-            sumSales += sales[i];
-        }
         long averageAmount = sumSales / sales.length;
 
         for (int i = 0; i < sales.length; i++) {
@@ -68,13 +63,8 @@ public class StatsService {
 
     public int maximumAverageSales(long[] sales) {
         int maxAverageSales = 0;
-        long sumSales = 0;
+        long sumSales = sumarySales(sales);
 
-
-        for (int i = 0; i < sales.length; i++) {
-
-            sumSales += sales[i];
-        }
         long aversgeAmount = sumSales / sales.length;
 
         for (int i = 0; i < sales.length; i++) {
